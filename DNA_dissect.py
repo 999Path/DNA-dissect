@@ -12,11 +12,12 @@ class RNA():
         self.U_content = 0
         self.gc_con = 0
 
+        # If there's no name default it to unknown
         if Name == '': 
             self.Name = 'Unknown'
         else: 
             self.Name = Name
-        
+        # If there's no DNA, prompt the user to input the DNA sequence
         if DNA == '': 
             print("Error: Input a DNA seqeuence")
 # This function transcribe the DNA to RNA 
@@ -75,6 +76,7 @@ class RNA():
                 self.CDNA[x] = "G"
                 
         self.New_CDNA = ''.join(self.CDNA)
+        
     # This function generate the results file
     def save(self):
         output_file = f'{self.Name}.txt'
